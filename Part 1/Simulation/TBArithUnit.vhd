@@ -58,7 +58,7 @@ STIM:	Process is
 		Begin
 			Wait until Resetn = '1';
 			Wait for 10 ns;
-			file_open( VectorFile, "ArithUnit00.tvs", read_mode );
+			file_open( VectorFile, "ArithUnit01.tvs", read_mode );
 			while not endfile( VectorFile ) loop
 -- Preceed the measurement with "Forced Unknown", 'X'
 				MeasurementIndex <= MeasurementIndex + 1;
@@ -138,25 +138,25 @@ STIM:	Process is
 						"ZeroVar = " & to_string(Zerovar)
 						Severity error;
 				End If;
-				
-				If AltB /= AltBvar then
-					ResultV := '0';			
-					Assert AltB = AltBvar
-						Report "Measurement Index := " & to_string(MeasurementIndex) & CR &
-						"  AltB = " & to_string(AltB) & CR &
-						"AltBVar = " & to_string(AltBvar)
-						Severity error;
-				End If;
+				If AddnSubvar = '1' and ExtWordvar = '0' then
+					If AltB /= AltBvar then
+						ResultV := '0';			
+						Assert AltB = AltBvar
+							Report "Measurement Index := " & to_string(MeasurementIndex) & CR &
+							"  AltB = " & to_string(AltB) & CR &
+							"AltBVar = " & to_string(AltBvar)
+							Severity error;
+					End If;
 
-				If AltBu /= AltBuvar then
-					ResultV := '0';			
-					Assert AltBu = AltBuvar
-						Report "Measurement Index := " & to_string(MeasurementIndex) & CR &
-						"  AltBu = " & to_string(AltBu) & CR &
-						"AltBuVar = " & to_string(AltBuvar)
-						Severity error;
+					If AltBu /= AltBuvar then
+						ResultV := '0';			
+						Assert AltBu = AltBuvar
+							Report "Measurement Index := " & to_string(MeasurementIndex) & CR &
+							"  AltBu = " & to_string(AltBu) & CR &
+							"AltBuVar = " & to_string(AltBuvar)
+							Severity error;
+					End If;
 				End If;
-
 --				Report "   ---   Propagation Delay = " & to_string(PropTimeDelay);
 				Wait until Clock = '1';
 			End Loop;
