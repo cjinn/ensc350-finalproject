@@ -50,3 +50,31 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# ignore some of Quartus II generated files
+*_generation_script*
+*_inst.vhd
+*.bak
+*.rdb
+*.hdb
+*.qmsg
+*.pin
+*.pof
+*.ptf.*
+*.qar
+*.qarlog
+*.qws
+*.smsg
+*.sof
+*.sopc_builder
+*.tcl
+*.sci
+*.db_info
+*.sld_design_entry
+*.sci
+
+# ignore Quartus II generated folders
+*/db/
+db/
+*_output_files/
+*PLLJ_PLLSPE_INFO.txt
