@@ -18,8 +18,10 @@ begin
   bitcell: for i in width-1 downto 0
   generate
   begin
-    cellGi: entity Work.and2 port map ( X(i), Y(i), G(i) );
-    cellPi: entity Work.xor2 port map ( X(i), Y(i), P(i) );
+    -- cellGi: entity Work.and2 port map ( X(i), Y(i), G(i) );
+    -- cellPi: entity Work.xor2 port map ( X(i), Y(i), P(i) );
+    G(i) <= X(i) and Y(i);
+    P(i) <= X(i) xor Y(i);
   end generate bitcell;
 end architecture Structural;
 
@@ -31,7 +33,7 @@ entity Snet is
   generic ( width : integer := 16 );
   port (
     P        :     in     std_logic_vector(width-1 downto 0);
-    C        :     in     std_logic_vector(width downto 0);
+    C        :     in     std_logic_vector(width downto 0); -- Why is this not compiling!?
     S        :     out    std_logic_vector(width downto 0) );
 end entity Snet;
 
@@ -41,7 +43,8 @@ begin
   bitcell: for i in width-1 downto 0
   generate
   begin
-    cellSi: entity Work.xor2 port map ( P(i), C(i), S(i) );
+    -- cellSi: entity Work.xor2 port map ( P(i), C(i), S(i) );
+    S(i) <= P(i) xor C(i);
   end generate bitcell;
   
   S(width) <= C(width);
