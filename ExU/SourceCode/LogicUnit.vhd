@@ -26,6 +26,21 @@ begin
     Y <=  AndAB when "01",
           OrAB  when "10",
           XorAB when "11",
-          B when others; -- Not sure if this is the best way
-              
+          B when others; -- Not sure if this is the best way     
 end rtl;
+
+Architecture behavioural of LogicUnit is
+  signal AndAB  : std_logic_vector(N-1 downto 0);
+  signal OrAB   : std_logic_vector(N-1 downto 0);
+  signal XorAB  : std_logic_vector(N-1 downto 0);
+begin
+  LogicUnitAndGate  : entity Work.AndGate generic map(N) port map(A, B, AndAB);
+  LogicUnitOrGate   : entity Work.OrGate generic map(N) port map(A, B, OrAB);
+  LogicUnitXorGate  : entity Work.XorGate generic map(N) port map(A, B, XorAB);
+
+  with LogicFn select
+    Y <=  AndAB when "01",
+          OrAB  when "10",
+          XorAB when "11",
+          B when others; -- Not sure if this is the best way     
+end behavioural;
