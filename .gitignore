@@ -127,3 +127,7 @@ Backup of *.doc*
 
 # Visio autosave temporary files
 *.~vsd*
+
+## Project-specific files
+*/Simulation/FuncArithUnitTranscript.txt
+*/Simulation/FuncLogicUnitTranscript.txt

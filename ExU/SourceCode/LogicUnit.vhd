@@ -10,7 +10,7 @@ Entity LogicUnit is
     B       : in std_logic_vector(N-1 downto 0);
     LogicFn : in std_logic_vector(1 downto 0);
 	 
-    Result  : out std_logic_vector(N-1 downto 0));
+    Y       : out std_logic_vector(N-1 downto 0));
 End Entity LogicUnit;
 
 Architecture rtl of LogicUnit is
@@ -23,9 +23,9 @@ begin
   LogicUnitXorGate  : entity Work.XorGate generic map(N) port map(A, B, XorAB);
 
   with LogicFn select
-    Result <= AndAB when "01",
-              OrAB  when "10",
-              XorAB when "11",
-              B when others; -- Not sure if this is the best way
+    Y <=  AndAB when "01",
+          OrAB  when "10",
+          XorAB when "11",
+          B when others; -- Not sure if this is the best way
               
 end rtl;
