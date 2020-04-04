@@ -78,9 +78,31 @@ dkms.conf
 # ignore Quartus II generated folders
 */db/
 db/
+incremental_db
+*/incremental_db
 *_output_files/
 *PLLJ_PLLSPE_INFO.txt
 
+## ModelSim Generated Files
+# ignore compilation output of ModelSim
+*.mti
+*.dat
+*.dbs
+*.psm
+*.bak
+*.cmp
+*.jpg
+*.html
+*.bsf
+
+# ignore simulation output of ModelSim
+wlf*
+*.wlf
+*.vstf
+*.ucdb
+cov*/
+transcript*
+sc_dpiheader.h
 
 ## Office Temporary Files
 *.tmp
