@@ -29,7 +29,7 @@ begin
           B when others; -- Not sure if this is the best way     
 end rtl;
 
-Architecture behavioural of LogicUnit is
+Architecture structure of LogicUnit is
   signal AndAB  : std_logic_vector(N-1 downto 0);
   signal OrAB   : std_logic_vector(N-1 downto 0);
   signal XorAB  : std_logic_vector(N-1 downto 0);
@@ -43,4 +43,4 @@ begin
           OrAB  when "10",
           XorAB when "11",
           B when others; -- Not sure if this is the best way     
-end behavioural;
+end structure;
