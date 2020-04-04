@@ -29,11 +29,17 @@ end architecture Structural;
 -- Declare the Output network that produces the Sum bits. The output carry is
 -- Labeled as an additional Sum Bit.
 -----------------------------------------------------------------------------
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
 entity Snet is
   generic ( width : integer := 16 );
   port (
     P        :     in     std_logic_vector(width-1 downto 0);
-    C        :     in     std_logic_vector(width downto 0); -- Why is this not compiling!?
+    C        :     in     std_logic_vector(width downto 0);
     S        :     out    std_logic_vector(width downto 0) );
 end entity Snet;
 

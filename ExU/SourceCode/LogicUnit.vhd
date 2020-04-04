@@ -1,7 +1,7 @@
 library ieee;
 Use ieee.std_logic_1164.all;
-Use std.TEXTIO.all;
 Use ieee.numeric_std.all;
+Use ieee.std_logic_arith.all;
 
 Entity LogicUnit is
   Generic ( N : natural := 64 );
@@ -14,10 +14,18 @@ Entity LogicUnit is
 End Entity LogicUnit;
 
 Architecture rtl of LogicUnit is
+  signal AndAB  : std_logic_vector(N-1 downto 0);
+  signal OrAB   : std_logic_vector(N-1 downto 0);
+  signal XorAB  : std_logic_vector(N-1 downto 0);
 begin
+  LogicUnitAndGate  : entity Work.AndGate generic map(N) port map(A, B, AndAB);
+  LogicUnitOrGate   : entity Work.OrGate generic map(N) port map(A, B, OrAB);
+  LogicUnitXorGate  : entity Work.XorGate generic map(N) port map(A, B, XorAB);
+
   with LogicFn select
-    Result <= B when "00",
-              A xor B when "01",
-              A or B when "10",
-              A and B when "11";
+    Result <= AndAB when "01",
+              OrAB  when "10",
+              XorAB when "11",
+              B when others; -- Not sure if this is the best way
+              
 end rtl;
