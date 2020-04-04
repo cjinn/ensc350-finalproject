@@ -24,25 +24,48 @@ begin
   -- Multipler for B input
   with AddSub select
     AtlBu <=  B when '0',
-              B when '1'; -- Needs work
+              B when others; -- Needs work
 
     -- Multipler for A input
     with NotA select
     AtlB <=   A when '0',
-              A when '1'; -- Needs work
+              A when others; -- Needs work
 
     -- Adder (Ripple for now)
-    ArithAdder:  entity work.Adder(Ripple) generic map (16) port map ( A, B, '0', S);
+    --ArithAdder:  entity work.Cnet(Ripple) generic map (16) port map ( A, B, '0', S);
       
     -- Sign Extension
     with ExtWord select
       Y <=  S when '0',
-            S when '1'; -- Needs work
+            S when others; -- Needs work
     
     -- AtlBu and AtlB
-	 -- Needs work
-
-
-
-  
+	 -- Needs work  
 end Architecture rtl;
+
+Architecture behavioural of ArithUnit is
+  signal S : std_logic_vector(N-1 downto 0);
+  
+begin
+  -- Multipler for B input
+  with AddSub select
+    AtlBu <=  B when '0',
+              B when others; -- Needs work
+
+    -- Multipler for A input
+    with NotA select
+    AtlB <=   A when '0',
+              A when others; -- Needs work
+
+    -- Adder (Ripple for now)
+    -- Needs work. Commented out for now
+    --ArithAdder:  entity work.Cnet(Ripple) generic map (16) port map ( A, B, '0', S);
+      
+    -- Sign Extension
+    with ExtWord select
+      Y <=  S when '0',
+            S when others; -- Needs work
+    
+    -- AtlBu and AtlB
+	 -- Needs work  
+end Architecture behavioural;

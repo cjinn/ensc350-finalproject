@@ -29,7 +29,7 @@
 (DELAYFILE
   (SDFVERSION "2.1")
   (DESIGN "LogicUnit")
-  (DATE "04/03/2020 21:59:17")
+  (DATE "04/03/2020 22:20:18")
   (VENDOR "Altera")
   (PROGRAM "Quartus Prime")
   (VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition")
@@ -38,7 +38,7 @@
 
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[0\]\~output\\)
+    (INSTANCE \\Y\[0\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (410:410:410) (465:465:465))
@@ -48,7 +48,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[1\]\~output\\)
+    (INSTANCE \\Y\[1\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (565:565:565) (629:629:629))
@@ -58,7 +58,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[2\]\~output\\)
+    (INSTANCE \\Y\[2\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (2956:2956:2956) (3319:3319:3319))
@@ -68,7 +68,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[3\]\~output\\)
+    (INSTANCE \\Y\[3\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (751:751:751) (858:858:858))
@@ -78,7 +78,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[4\]\~output\\)
+    (INSTANCE \\Y\[4\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (635:635:635) (712:712:712))
@@ -88,7 +88,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[5\]\~output\\)
+    (INSTANCE \\Y\[5\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (523:523:523) (592:592:592))
@@ -98,7 +98,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[6\]\~output\\)
+    (INSTANCE \\Y\[6\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (640:640:640) (701:701:701))
@@ -108,7 +108,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[7\]\~output\\)
+    (INSTANCE \\Y\[7\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (696:696:696) (789:789:789))
@@ -118,7 +118,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[8\]\~output\\)
+    (INSTANCE \\Y\[8\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (904:904:904) (1017:1017:1017))
@@ -128,7 +128,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[9\]\~output\\)
+    (INSTANCE \\Y\[9\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (530:530:530) (590:590:590))
@@ -138,7 +138,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[10\]\~output\\)
+    (INSTANCE \\Y\[10\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (672:672:672) (746:746:746))
@@ -148,7 +148,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[11\]\~output\\)
+    (INSTANCE \\Y\[11\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (531:531:531) (609:609:609))
@@ -158,7 +158,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[12\]\~output\\)
+    (INSTANCE \\Y\[12\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (491:491:491) (551:551:551))
@@ -168,7 +168,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[13\]\~output\\)
+    (INSTANCE \\Y\[13\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (423:423:423) (474:474:474))
@@ -178,7 +178,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[14\]\~output\\)
+    (INSTANCE \\Y\[14\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (662:662:662) (731:731:731))
@@ -188,7 +188,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[15\]\~output\\)
+    (INSTANCE \\Y\[15\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (501:501:501) (569:569:569))
@@ -198,7 +198,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[16\]\~output\\)
+    (INSTANCE \\Y\[16\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (527:527:527) (586:586:586))
@@ -208,7 +208,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[17\]\~output\\)
+    (INSTANCE \\Y\[17\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (575:575:575) (642:642:642))
@@ -218,7 +218,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[18\]\~output\\)
+    (INSTANCE \\Y\[18\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (593:593:593) (667:667:667))
@@ -228,7 +228,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[19\]\~output\\)
+    (INSTANCE \\Y\[19\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (631:631:631) (707:707:707))
@@ -238,7 +238,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[20\]\~output\\)
+    (INSTANCE \\Y\[20\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (300:300:300) (337:337:337))
@@ -248,7 +248,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[21\]\~output\\)
+    (INSTANCE \\Y\[21\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (304:304:304) (341:341:341))
@@ -258,7 +258,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[22\]\~output\\)
+    (INSTANCE \\Y\[22\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (635:635:635) (731:731:731))
@@ -268,7 +268,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[23\]\~output\\)
+    (INSTANCE \\Y\[23\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (330:330:330) (376:376:376))
@@ -278,7 +278,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[24\]\~output\\)
+    (INSTANCE \\Y\[24\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (790:790:790) (867:867:867))
@@ -288,7 +288,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[25\]\~output\\)
+    (INSTANCE \\Y\[25\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (567:567:567) (645:645:645))
@@ -298,7 +298,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[26\]\~output\\)
+    (INSTANCE \\Y\[26\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (617:617:617) (681:681:681))
@@ -308,7 +308,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[27\]\~output\\)
+    (INSTANCE \\Y\[27\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (437:437:437) (487:487:487))
@@ -318,7 +318,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[28\]\~output\\)
+    (INSTANCE \\Y\[28\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (539:539:539) (599:599:599))
@@ -328,7 +328,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[29\]\~output\\)
+    (INSTANCE \\Y\[29\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (674:674:674) (738:738:738))
@@ -338,7 +338,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[30\]\~output\\)
+    (INSTANCE \\Y\[30\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (527:527:527) (578:578:578))
@@ -348,7 +348,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[31\]\~output\\)
+    (INSTANCE \\Y\[31\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (310:310:310) (348:348:348))
@@ -358,7 +358,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[32\]\~output\\)
+    (INSTANCE \\Y\[32\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (709:709:709) (794:794:794))
@@ -368,7 +368,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[33\]\~output\\)
+    (INSTANCE \\Y\[33\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (524:524:524) (580:580:580))
@@ -378,7 +378,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[34\]\~output\\)
+    (INSTANCE \\Y\[34\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (587:587:587) (651:651:651))
@@ -388,7 +388,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[35\]\~output\\)
+    (INSTANCE \\Y\[35\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (515:515:515) (566:566:566))
@@ -398,7 +398,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[36\]\~output\\)
+    (INSTANCE \\Y\[36\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (855:855:855) (958:958:958))
@@ -408,7 +408,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[37\]\~output\\)
+    (INSTANCE \\Y\[37\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (538:538:538) (605:605:605))
@@ -418,7 +418,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[38\]\~output\\)
+    (INSTANCE \\Y\[38\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (425:425:425) (475:475:475))
@@ -428,7 +428,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[39\]\~output\\)
+    (INSTANCE \\Y\[39\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (684:684:684) (775:775:775))
@@ -438,7 +438,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[40\]\~output\\)
+    (INSTANCE \\Y\[40\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (727:727:727) (815:815:815))
@@ -448,7 +448,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[41\]\~output\\)
+    (INSTANCE \\Y\[41\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (612:612:612) (678:678:678))
@@ -458,7 +458,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[42\]\~output\\)
+    (INSTANCE \\Y\[42\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (523:523:523) (581:581:581))
@@ -468,7 +468,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[43\]\~output\\)
+    (INSTANCE \\Y\[43\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (342:342:342) (385:385:385))
@@ -478,7 +478,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[44\]\~output\\)
+    (INSTANCE \\Y\[44\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (573:573:573) (638:638:638))
@@ -488,7 +488,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[45\]\~output\\)
+    (INSTANCE \\Y\[45\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (300:300:300) (336:336:336))
@@ -498,7 +498,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[46\]\~output\\)
+    (INSTANCE \\Y\[46\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (301:301:301) (338:338:338))
@@ -508,7 +508,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[47\]\~output\\)
+    (INSTANCE \\Y\[47\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (491:491:491) (555:555:555))
@@ -518,7 +518,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[48\]\~output\\)
+    (INSTANCE \\Y\[48\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (603:603:603) (677:677:677))
@@ -528,7 +528,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[49\]\~output\\)
+    (INSTANCE \\Y\[49\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (323:323:323) (366:366:366))
@@ -538,7 +538,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[50\]\~output\\)
+    (INSTANCE \\Y\[50\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (659:659:659) (750:750:750))
@@ -548,7 +548,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[51\]\~output\\)
+    (INSTANCE \\Y\[51\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (674:674:674) (752:752:752))
@@ -558,7 +558,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[52\]\~output\\)
+    (INSTANCE \\Y\[52\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (438:438:438) (490:490:490))
@@ -568,7 +568,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[53\]\~output\\)
+    (INSTANCE \\Y\[53\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (645:645:645) (717:717:717))
@@ -578,7 +578,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[54\]\~output\\)
+    (INSTANCE \\Y\[54\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (566:566:566) (639:639:639))
@@ -588,7 +588,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[55\]\~output\\)
+    (INSTANCE \\Y\[55\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (526:526:526) (604:604:604))
@@ -598,7 +598,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[56\]\~output\\)
+    (INSTANCE \\Y\[56\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (642:642:642) (732:732:732))
@@ -608,7 +608,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[57\]\~output\\)
+    (INSTANCE \\Y\[57\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (509:509:509) (578:578:578))
@@ -618,7 +618,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[58\]\~output\\)
+    (INSTANCE \\Y\[58\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (734:734:734) (826:826:826))
@@ -628,7 +628,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[59\]\~output\\)
+    (INSTANCE \\Y\[59\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (339:339:339) (387:387:387))
@@ -638,7 +638,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[60\]\~output\\)
+    (INSTANCE \\Y\[60\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (313:313:313) (353:353:353))
@@ -648,7 +648,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[61\]\~output\\)
+    (INSTANCE \\Y\[61\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (3031:3031:3031) (3400:3400:3400))
@@ -658,7 +658,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[62\]\~output\\)
+    (INSTANCE \\Y\[62\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (642:642:642) (710:710:710))
@@ -668,7 +668,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_obuf")
-    (INSTANCE \\Result\[63\]\~output\\)
+    (INSTANCE \\Y\[63\]\~output\\)
     (DELAY
       (ABSOLUTE
         (PORT i (783:783:783) (860:860:860))

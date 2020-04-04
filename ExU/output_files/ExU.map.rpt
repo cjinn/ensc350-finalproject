@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ExU
-Fri Apr 03 21:58:53 2020
+Fri Apr 03 22:19:54 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -47,7 +47,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Apr 03 21:58:53 2020       ;
+; Analysis & Synthesis Status        ; Successful - Fri Apr 03 22:19:54 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; ExU                                         ;
 ; Top-level Entity Name              ; LogicUnit                                   ;
@@ -312,10 +312,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri Apr 03 21:58:41 2020
+    Info: Processing started: Fri Apr 03 22:19:43 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ExU -c ExU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 3 design units, including 1 entities, in source file sourcecode/arithunit.vhd
+    Info (12022): Found design unit 1: ArithUnit-rtl File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 20
+    Info (12022): Found design unit 2: ArithUnit-behavioural File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 46
+    Info (12023): Found entity 1: ArithUnit File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 6
 Info (12021): Found 6 design units, including 3 entities, in source file sourcecode/logicgates.vhd
     Info (12022): Found design unit 1: AndGate-rtl File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/LogicGates.vhd Line: 19
     Info (12022): Found design unit 2: OrGate-rtl File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/LogicGates.vhd Line: 43
@@ -323,13 +327,14 @@ Info (12021): Found 6 design units, including 3 entities, in source file sourcec
     Info (12023): Found entity 1: AndGate File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/LogicGates.vhd Line: 11
     Info (12023): Found entity 2: OrGate File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/LogicGates.vhd Line: 35
     Info (12023): Found entity 3: XorGate File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/LogicGates.vhd Line: 59
-Info (12021): Found 2 design units, including 1 entities, in source file sourcecode/logicunit.vhd
+Info (12021): Found 3 design units, including 1 entities, in source file sourcecode/logicunit.vhd
     Info (12022): Found design unit 1: LogicUnit-rtl File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/LogicUnit.vhd Line: 16
+    Info (12022): Found design unit 2: LogicUnit-behavioural File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/LogicUnit.vhd Line: 32
     Info (12023): Found entity 1: LogicUnit File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/LogicUnit.vhd Line: 6
 Info (12127): Elaborating entity "LogicUnit" for the top level hierarchy
-Info (12128): Elaborating entity "AndGate" for hierarchy "AndGate:LogicUnitAndGate" File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/LogicUnit.vhd Line: 21
-Info (12128): Elaborating entity "OrGate" for hierarchy "OrGate:LogicUnitOrGate" File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/LogicUnit.vhd Line: 22
-Info (12128): Elaborating entity "XorGate" for hierarchy "XorGate:LogicUnitXorGate" File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/LogicUnit.vhd Line: 23
+Info (12128): Elaborating entity "AndGate" for hierarchy "AndGate:LogicUnitAndGate" File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/LogicUnit.vhd Line: 37
+Info (12128): Elaborating entity "OrGate" for hierarchy "OrGate:LogicUnitOrGate" File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/LogicUnit.vhd Line: 38
+Info (12128): Elaborating entity "XorGate" for hierarchy "XorGate:LogicUnitXorGate" File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/LogicUnit.vhd Line: 39
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -338,9 +343,9 @@ Info (21057): Implemented 258 device resources after synthesis - the final resou
     Info (21059): Implemented 64 output pins
     Info (21061): Implemented 64 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4810 megabytes
-    Info: Processing ended: Fri Apr 03 21:58:53 2020
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:23
+    Info: Peak virtual memory: 4809 megabytes
+    Info: Processing ended: Fri Apr 03 22:19:54 2020
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:24
 
 

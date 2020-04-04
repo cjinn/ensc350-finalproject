@@ -75,6 +75,33 @@ entity Adder is
     Cin      :     in     std_logic;
     S        :     out    std_logic_vector(width downto 0) );
 end entity Adder;
+  
+-----------------------------------------------------------------------------
+-- Declare the Carry network for the adder.
+-----------------------------------------------------------------------------
+
+entity Cnet is
+  generic ( width : integer := 16 );
+  port(
+    G, P     :     in     std_logic_vector(width-1 downto 0);
+    Cin      :     in     std_logic;
+    C        :     out    std_logic_vector(width downto 0));
+end entity Cnet;
+
+-----------------------------------------------------------------------------
+-- Students must Create the following Carry Network Architectures.
+-----------------------------------------------------------------------------
+architecture Ripple of Cnet is
+	signal interWire : std_logic_vector(width downto 0); -- Don't read from output signal C
+begin
+  a(0) <= Cin;
+
+	CpropGenerate: for index in 0 to width-1 generate
+		Cpropi: entity Work.Cprop port map(G(index), P(index), interWire(index), interWire(index + 1));
+	end generate CpropGenerate;
+
+	C(width downto 0) <= a(width downto 0);
+end architecture Ripple;
 
 -----------------------------------------------------------------------------
 -- Ripple Adder Architecture.
@@ -127,31 +154,3 @@ begin
   middle: entity Work.Cnet(BrentKung) generic map (width) port map ( G, P, Cin, C );
   output: entity Work.Snet  generic map (width) port map ( P, C, S );
 end architecture BrentKung;
-
-  
------------------------------------------------------------------------------
--- Declare the Carry network for the adder.
------------------------------------------------------------------------------
-
-entity Cnet is
-  generic ( width : integer := 16 );
-  port(
-    G, P     :     in     std_logic_vector(width-1 downto 0);
-    Cin      :     in     std_logic;
-    C        :     out    std_logic_vector(width downto 0));
-end entity Cnet;
-
------------------------------------------------------------------------------
--- Students must Create the following Carry Network Architectures.
------------------------------------------------------------------------------
-architecture Ripple of Cnet is
-	signal interWire : std_logic_vector(width downto 0); -- Don't read from output signal C
-begin
-  a(0) <= Cin;
-
-	CpropGenerate: for index in 0 to width-1 generate
-		Cpropi: entity Work.Cprop port map(G(index), P(index), interWire(index), interWire(index + 1));
-	end generate CpropGenerate;
-
-	C(width downto 0) <= a(width downto 0);
-end architecture Ripple;
