@@ -94,7 +94,7 @@ incremental_db
 *.psm
 *.bak
 *.cmp
-*.jpg
+# *.jpg # Just in case our images are in .jpg
 *.html
 *.bsf
 
@@ -131,3 +131,6 @@ Backup of *.doc*
 ## Project-specific files
 */Simulation/FuncArithUnitTranscript.txt
 */Simulation/FuncLogicUnitTranscript.txt
+*/Simulation/TimeArithUnitTranscript.txt
+*/Simulation/TimeLogicUnitTranscript.txt
+*_typ.csd
