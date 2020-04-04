@@ -1,0 +1,390 @@
+#----------------------------------------------------------------------------------------------------------
+# compile
+#----------------------------------------------------------------------------------------------------------
+# vcom -work work -2008 -explicit -stats=none ../SourceCode/LogicUnit.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Compiling entity LogicUnit
+# -- Compiling architecture rtl of LogicUnit
+# -- Loading entity AndGate
+# -- Loading entity OrGate
+# -- Loading entity XorGate
+# 
+# vcom -work work -2008 -explicit -stats=none TBLogicUnit.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity TbLogicUnit
+# -- Compiling architecture behavioural of TbLogicUnit
+# 
+# vcom -work work -2008 -explicit -stats=time,-cmd,msg ConfigExU.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:53:20 on Apr 03,2020
+# -- Loading package STANDARD
+# -- Compiling configuration FuncLUSim
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading entity TbLogicUnit
+# -- Loading architecture behavioural of TbLogicUnit
+# -- Loading package std_logic_arith
+# -- Loading entity LogicUnit
+# ** Error: ConfigExU.vhd(3): (vcom-1131) Port "Y" is declared on component "LogicUnit" but not on entity "LogicUnit".
+# ** Error: ConfigExU.vhd(5): VHDL Compiler exiting
+# End time: 21:53:20 on Apr 03,2020, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# ** Error: C:/intelFPGA/18.1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro C:\Users\Jin-Desktop\Documents\Projects\ensc350-finalproject\ExU\Simulation\FunctionalLogicUnit.do line 11
+# C:/intelFPGA/18.1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -work work -2008 -explicit -stats=time,-cmd,msg ConfigExU.vhd"
+# vcom -work work -2002 -explicit -stats=none C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/LogicUnit.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Compiling entity LogicUnit
+# -- Compiling architecture rtl of LogicUnit
+# -- Loading entity AndGate
+# -- Loading entity OrGate
+# -- Loading entity XorGate
+# 
+# 
+# vcom -work work -2002 -explicit -stats=none C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/LogicGates.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Compiling entity AndGate
+# -- Compiling architecture rtl of AndGate
+# -- Compiling entity OrGate
+# -- Compiling architecture rtl of OrGate
+# -- Compiling entity XorGate
+# -- Compiling architecture rtl of XorGate
+# 
+# 
+# vcom -work work -2002 -explicit -stats=none C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/ConfigExU.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# -- Loading package STANDARD
+# -- Compiling configuration FuncLUSim
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading entity TbLogicUnit
+# -- Loading architecture behavioural of TbLogicUnit
+# -- Loading package std_logic_arith
+# -- Loading entity LogicUnit
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/ConfigExU.vhd(3): (vcom-1131) Port "Y" is declared on component "LogicUnit" but not on entity "LogicUnit".
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/ConfigExU.vhd(5): VHDL Compiler exiting
+# 
+# 
+# vcom -work work -2002 -explicit -stats=none C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity TbArithUnit
+# -- Compiling architecture behavioural of TbArithUnit
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(78): (vcom-1136) Unknown identifier "hread".
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(79): (vcom-1136) Unknown identifier "hread".
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(80): (vcom-1600) No feasible entries for subprogram "read".
+#    Visible subprograms are:
+#       (implicit) TEXTIO.read[std.TEXTIO.TEXT, std.STANDARD.STRING, INTEGER] at $MODEL_TECH/../vhdl_src/std/textio.vhd(15)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BIT, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(64)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BIT] at $MODEL_TECH/../vhdl_src/std/textio.vhd(66)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BIT_VECTOR, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(68)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BIT_VECTOR] at $MODEL_TECH/../vhdl_src/std/textio.vhd(70)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BOOLEAN, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(72)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(74)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.CHARACTER, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(76)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.CHARACTER] at $MODEL_TECH/../vhdl_src/std/textio.vhd(78)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, INTEGER, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(80)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, INTEGER] at $MODEL_TECH/../vhdl_src/std/textio.vhd(82)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.REAL, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(84)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.REAL] at $MODEL_TECH/../vhdl_src/std/textio.vhd(86)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.STRING, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(88)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.STRING] at $MODEL_TECH/../vhdl_src/std/textio.vhd(90)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.TIME, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(92)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.TIME] at $MODEL_TECH/../vhdl_src/std/textio.vhd(94)
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(81): (vcom-1600) No feasible entries for subprogram "read".
+#    Visible subprograms are:
+#       (implicit) TEXTIO.read[std.TEXTIO.TEXT, std.STANDARD.STRING, INTEGER] at $MODEL_TECH/../vhdl_src/std/textio.vhd(15)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BIT, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(64)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BIT] at $MODEL_TECH/../vhdl_src/std/textio.vhd(66)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BIT_VECTOR, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(68)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BIT_VECTOR] at $MODEL_TECH/../vhdl_src/std/textio.vhd(70)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BOOLEAN, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(72)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(74)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.CHARACTER, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(76)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.CHARACTER] at $MODEL_TECH/../vhdl_src/std/textio.vhd(78)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, INTEGER, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(80)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, INTEGER] at $MODEL_TECH/../vhdl_src/std/textio.vhd(82)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.REAL, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(84)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.REAL] at $MODEL_TECH/../vhdl_src/std/textio.vhd(86)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.STRING, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(88)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.STRING] at $MODEL_TECH/../vhdl_src/std/textio.vhd(90)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.TIME, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(92)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.TIME] at $MODEL_TECH/../vhdl_src/std/textio.vhd(94)
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(82): (vcom-1600) No feasible entries for subprogram "read".
+#    Visible subprograms are:
+#       (implicit) TEXTIO.read[std.TEXTIO.TEXT, std.STANDARD.STRING, INTEGER] at $MODEL_TECH/../vhdl_src/std/textio.vhd(15)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BIT, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(64)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BIT] at $MODEL_TECH/../vhdl_src/std/textio.vhd(66)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BIT_VECTOR, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(68)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BIT_VECTOR] at $MODEL_TECH/../vhdl_src/std/textio.vhd(70)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BOOLEAN, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(72)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(74)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.CHARACTER, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(76)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.CHARACTER] at $MODEL_TECH/../vhdl_src/std/textio.vhd(78)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, INTEGER, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(80)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, INTEGER] at $MODEL_TECH/../vhdl_src/std/textio.vhd(82)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.REAL, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(84)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.REAL] at $MODEL_TECH/../vhdl_src/std/textio.vhd(86)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.STRING, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(88)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.STRING] at $MODEL_TECH/../vhdl_src/std/textio.vhd(90)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.TIME, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(92)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.TIME] at $MODEL_TECH/../vhdl_src/std/textio.vhd(94)
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(83): (vcom-1136) Unknown identifier "hread".
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(84): (vcom-1600) No feasible entries for subprogram "read".
+#    Visible subprograms are:
+#       (implicit) TEXTIO.read[std.TEXTIO.TEXT, std.STANDARD.STRING, INTEGER] at $MODEL_TECH/../vhdl_src/std/textio.vhd(15)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BIT, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(64)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BIT] at $MODEL_TECH/../vhdl_src/std/textio.vhd(66)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BIT_VECTOR, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(68)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BIT_VECTOR] at $MODEL_TECH/../vhdl_src/std/textio.vhd(70)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BOOLEAN, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(72)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(74)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.CHARACTER, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(76)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.CHARACTER] at $MODEL_TECH/../vhdl_src/std/textio.vhd(78)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, INTEGER, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(80)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, INTEGER] at $MODEL_TECH/../vhdl_src/std/textio.vhd(82)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.REAL, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(84)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.REAL] at $MODEL_TECH/../vhdl_src/std/textio.vhd(86)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.STRING, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(88)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.STRING] at $MODEL_TECH/../vhdl_src/std/textio.vhd(90)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.TIME, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(92)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.TIME] at $MODEL_TECH/../vhdl_src/std/textio.vhd(94)
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(85): (vcom-1600) No feasible entries for subprogram "read".
+#    Visible subprograms are:
+#       (implicit) TEXTIO.read[std.TEXTIO.TEXT, std.STANDARD.STRING, INTEGER] at $MODEL_TECH/../vhdl_src/std/textio.vhd(15)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BIT, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(64)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BIT] at $MODEL_TECH/../vhdl_src/std/textio.vhd(66)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BIT_VECTOR, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(68)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BIT_VECTOR] at $MODEL_TECH/../vhdl_src/std/textio.vhd(70)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BOOLEAN, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(72)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(74)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.CHARACTER, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(76)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.CHARACTER] at $MODEL_TECH/../vhdl_src/std/textio.vhd(78)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, INTEGER, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(80)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, INTEGER] at $MODEL_TECH/../vhdl_src/std/textio.vhd(82)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.REAL, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(84)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.REAL] at $MODEL_TECH/../vhdl_src/std/textio.vhd(86)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.STRING, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(88)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.STRING] at $MODEL_TECH/../vhdl_src/std/textio.vhd(90)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.TIME, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(92)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.TIME] at $MODEL_TECH/../vhdl_src/std/textio.vhd(94)
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(86): (vcom-1600) No feasible entries for subprogram "read".
+#    Visible subprograms are:
+#       (implicit) TEXTIO.read[std.TEXTIO.TEXT, std.STANDARD.STRING, INTEGER] at $MODEL_TECH/../vhdl_src/std/textio.vhd(15)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BIT, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(64)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BIT] at $MODEL_TECH/../vhdl_src/std/textio.vhd(66)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BIT_VECTOR, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(68)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BIT_VECTOR] at $MODEL_TECH/../vhdl_src/std/textio.vhd(70)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BOOLEAN, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(72)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(74)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.CHARACTER, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(76)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.CHARACTER] at $MODEL_TECH/../vhdl_src/std/textio.vhd(78)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, INTEGER, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(80)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, INTEGER] at $MODEL_TECH/../vhdl_src/std/textio.vhd(82)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.REAL, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(84)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.REAL] at $MODEL_TECH/../vhdl_src/std/textio.vhd(86)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.STRING, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(88)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.STRING] at $MODEL_TECH/../vhdl_src/std/textio.vhd(90)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.TIME, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(92)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.TIME] at $MODEL_TECH/../vhdl_src/std/textio.vhd(94)
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(87): (vcom-1600) No feasible entries for subprogram "read".
+#    Visible subprograms are:
+#       (implicit) TEXTIO.read[std.TEXTIO.TEXT, std.STANDARD.STRING, INTEGER] at $MODEL_TECH/../vhdl_src/std/textio.vhd(15)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BIT, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(64)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BIT] at $MODEL_TECH/../vhdl_src/std/textio.vhd(66)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BIT_VECTOR, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(68)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BIT_VECTOR] at $MODEL_TECH/../vhdl_src/std/textio.vhd(70)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BOOLEAN, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(72)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(74)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.CHARACTER, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(76)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.CHARACTER] at $MODEL_TECH/../vhdl_src/std/textio.vhd(78)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, INTEGER, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(80)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, INTEGER] at $MODEL_TECH/../vhdl_src/std/textio.vhd(82)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.REAL, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(84)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.REAL] at $MODEL_TECH/../vhdl_src/std/textio.vhd(86)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.STRING, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(88)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.STRING] at $MODEL_TECH/../vhdl_src/std/textio.vhd(90)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.TIME, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(92)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.TIME] at $MODEL_TECH/../vhdl_src/std/textio.vhd(94)
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(88): (vcom-1600) No feasible entries for subprogram "read".
+#    Visible subprograms are:
+#       (implicit) TEXTIO.read[std.TEXTIO.TEXT, std.STANDARD.STRING, INTEGER] at $MODEL_TECH/../vhdl_src/std/textio.vhd(15)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BIT, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(64)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BIT] at $MODEL_TECH/../vhdl_src/std/textio.vhd(66)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BIT_VECTOR, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(68)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BIT_VECTOR] at $MODEL_TECH/../vhdl_src/std/textio.vhd(70)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BOOLEAN, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(72)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(74)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.CHARACTER, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(76)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.CHARACTER] at $MODEL_TECH/../vhdl_src/std/textio.vhd(78)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, INTEGER, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(80)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, INTEGER] at $MODEL_TECH/../vhdl_src/std/textio.vhd(82)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.REAL, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(84)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.REAL] at $MODEL_TECH/../vhdl_src/std/textio.vhd(86)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.STRING, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(88)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.STRING] at $MODEL_TECH/../vhdl_src/std/textio.vhd(90)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.TIME, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(92)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.TIME] at $MODEL_TECH/../vhdl_src/std/textio.vhd(94)
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(109): (vcom-1136) Unknown identifier "to_string".
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(109): ** Error: (vcom-1590) Bad expression in left operand of infix expression '&'.
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(109): ** Error: (vcom-1590) Bad expression in left operand of infix expression '&'.
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(110): ** Error: (vcom-1590) Bad expression in left operand of infix expression '&'.
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(110): (vcom-1136) Unknown identifier "to_hstring".
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(110): ** Error: (vcom-1590) Bad expression in left operand of infix expression '&'.
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(110): ** Error: (vcom-1590) Bad expression in left operand of infix expression '&'.
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(111): ** Error: (vcom-1590) Bad expression in left operand of infix expression '&'.
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(111): (vcom-1136) Unknown identifier "to_hstring".
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(111): Type error resolving infix expression "&" as type std.STANDARD.STRING.
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(118): (vcom-1136) Unknown identifier "to_string".
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(118): ** Error: (vcom-1590) Bad expression in left operand of infix expression '&'.
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(118): ** Error: (vcom-1590) Bad expression in left operand of infix expression '&'.
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(119): ** Error: (vcom-1590) Bad expression in left operand of infix expression '&'.
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(119): (vcom-1136) Unknown identifier "to_string".
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(119): ** Error: (vcom-1590) Bad expression in left operand of infix expression '&'.
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(119): ** Error: (vcom-1590) Bad expression in left operand of infix expression '&'.
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(120): ** Error: (vcom-1590) Bad expression in left operand of infix expression '&'.
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(120): (vcom-1136) Unknown identifier "to_string".
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(120): Type error resolving infix expression "&" as type std.STANDARD.STRING.
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(127): (vcom-1136) Unknown identifier "to_string".
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(127): ** Error: (vcom-1590) Bad expression in left operand of infix expression '&'.
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(127): ** Error: (vcom-1590) Bad expression in left operand of infix expression '&'.
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(128): ** Error: (vcom-1590) Bad expression in left operand of infix expression '&'.
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(128): (vcom-1136) Unknown identifier "to_string".
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(128): ** Error: (vcom-1590) Bad expression in left operand of infix expression '&'.
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(128): ** Error: (vcom-1590) Bad expression in left operand of infix expression '&'.
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(129): ** Error: (vcom-1590) Bad expression in left operand of infix expression '&'.
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(129): (vcom-1136) Unknown identifier "to_string".
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(129): Type error resolving infix expression "&" as type std.STANDARD.STRING.
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(136): (vcom-1136) Unknown identifier "to_string".
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(136): ** Error: (vcom-1590) Bad expression in left operand of infix expression '&'.
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(136): ** Error: (vcom-1590) Bad expression in left operand of infix expression '&'.
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(137): ** Error: (vcom-1590) Bad expression in left operand of infix expression '&'.
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(137): (vcom-1136) Unknown identifier "to_string".
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(137): ** Error: (vcom-1590) Bad expression in left operand of infix expression '&'.
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(137): ** Error: (vcom-1590) Bad expression in left operand of infix expression '&'.
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(138): ** Error: (vcom-1590) Bad expression in left operand of infix expression '&'.
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(138): (vcom-1136) Unknown identifier "to_string".
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(138): Type error resolving infix expression "&" as type std.STANDARD.STRING.
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(145): (vcom-1136) Unknown identifier "to_string".
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(145): ** Error: (vcom-1590) Bad expression in left operand of infix expression '&'.
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(145): ** Error: (vcom-1590) Bad expression in left operand of infix expression '&'.
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(146): ** Error: (vcom-1590) Bad expression in left operand of infix expression '&'.
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(146): (vcom-1136) Unknown identifier "to_string".
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(146): ** Error: (vcom-1590) Bad expression in left operand of infix expression '&'.
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(146): ** Error: (vcom-1590) Bad expression in left operand of infix expression '&'.
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(147): ** Error: (vcom-1590) Bad expression in left operand of infix expression '&'.
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(147): (vcom-1136) Unknown identifier "to_string".
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(147): Type error resolving infix expression "&" as type std.STANDARD.STRING.
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(154): (vcom-1136) Unknown identifier "to_string".
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(154): ** Error: (vcom-1590) Bad expression in left operand of infix expression '&'.
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(154): ** Error: (vcom-1590) Bad expression in left operand of infix expression '&'.
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(155): ** Error: (vcom-1590) Bad expression in left operand of infix expression '&'.
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(155): (vcom-1136) Unknown identifier "to_string".
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(155): ** Error: (vcom-1590) Bad expression in left operand of infix expression '&'.
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(155): ** Error: (vcom-1590) Bad expression in left operand of infix expression '&'.
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(156): ** Error: (vcom-1590) Bad expression in left operand of infix expression '&'.
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(156): (vcom-1136) Unknown identifier "to_string".
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(156): Type error resolving infix expression "&" as type std.STANDARD.STRING.
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBArithUnit.vhd(168): VHDL Compiler exiting
+# 
+# 
+# vcom -work work -2002 -explicit -stats=none C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBLogicUnit.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity TbLogicUnit
+# -- Compiling architecture behavioural of TbLogicUnit
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBLogicUnit.vhd(83): (vcom-1136) Unknown identifier "hread".
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBLogicUnit.vhd(84): (vcom-1136) Unknown identifier "hread".
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBLogicUnit.vhd(85): (vcom-1600) No feasible entries for subprogram "read".
+#    Visible subprograms are:
+#       (implicit) TEXTIO.read[std.TEXTIO.TEXT, std.STANDARD.STRING, INTEGER] at $MODEL_TECH/../vhdl_src/std/textio.vhd(15)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BIT, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(64)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BIT] at $MODEL_TECH/../vhdl_src/std/textio.vhd(66)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BIT_VECTOR, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(68)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BIT_VECTOR] at $MODEL_TECH/../vhdl_src/std/textio.vhd(70)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BOOLEAN, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(72)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(74)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.CHARACTER, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(76)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.CHARACTER] at $MODEL_TECH/../vhdl_src/std/textio.vhd(78)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, INTEGER, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(80)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, INTEGER] at $MODEL_TECH/../vhdl_src/std/textio.vhd(82)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.REAL, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(84)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.REAL] at $MODEL_TECH/../vhdl_src/std/textio.vhd(86)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.STRING, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(88)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.STRING] at $MODEL_TECH/../vhdl_src/std/textio.vhd(90)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.TIME, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(92)
+#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.TIME] at $MODEL_TECH/../vhdl_src/std/textio.vhd(94)
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBLogicUnit.vhd(86): (vcom-1136) Unknown identifier "hread".
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBLogicUnit.vhd(107): (vcom-1136) Unknown identifier "to_string".
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBLogicUnit.vhd(107): ** Error: (vcom-1590) Bad expression in left operand of infix expression '&'.
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBLogicUnit.vhd(107): ** Error: (vcom-1590) Bad expression in left operand of infix expression '&'.
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBLogicUnit.vhd(108): ** Error: (vcom-1590) Bad expression in left operand of infix expression '&'.
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBLogicUnit.vhd(108): (vcom-1136) Unknown identifier "to_hstring".
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBLogicUnit.vhd(108): ** Error: (vcom-1590) Bad expression in left operand of infix expression '&'.
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBLogicUnit.vhd(108): ** Error: (vcom-1590) Bad expression in left operand of infix expression '&'.
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBLogicUnit.vhd(109): ** Error: (vcom-1590) Bad expression in left operand of infix expression '&'.
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBLogicUnit.vhd(109): (vcom-1136) Unknown identifier "to_hstring".
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBLogicUnit.vhd(109): Type error resolving infix expression "&" as type std.STANDARD.STRING.
+# ** Error: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/Simulation/TBLogicUnit.vhd(122): VHDL Compiler exiting
+# 
+# 
+# 5 compiles, 3 failed with 131 errors.
+# vcom -work work -2002 -explicit -stats=none C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/LogicUnit.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Compiling entity LogicUnit
+# -- Compiling architecture rtl of LogicUnit
+# -- Loading entity AndGate
+# -- Loading entity OrGate
+# -- Loading entity XorGate
+# 
+# 
+# vcom -work work -2002 -explicit -stats=none C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/LogicGates.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Compiling entity AndGate
+# -- Compiling architecture rtl of AndGate
+# -- Compiling entity OrGate
+# -- Compiling architecture rtl of OrGate
+# -- Compiling entity XorGate
+# -- Compiling architecture rtl of XorGate
+# 
+# 
+# 2 compiles, 0 failed with no errors.
