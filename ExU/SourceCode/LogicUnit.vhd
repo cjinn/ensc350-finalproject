@@ -24,9 +24,9 @@ begin
 
   with LogicFn select
     Y <=  B when "00",
-      AndAB when "01",
+      XorAB when "01",
       OrAB  when "10",
-      XorAB when "11",
+      AndAB when "11",
       (others => 'X') when others;    
 end rtl;
 
@@ -41,9 +41,9 @@ begin
 
   with LogicFn select
     Y <=  B when "00",
-          AndAB when "01",
+          XorAB when "01",
           OrAB  when "10",
-          XorAB when "11",
+          AndAB when "11",
           (others => 'X') when others;
 end structure;
 
