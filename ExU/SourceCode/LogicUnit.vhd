@@ -23,10 +23,11 @@ begin
   LogicUnitXorGate  : entity Work.XorGate generic map(N) port map(A, B, XorAB);
 
   with LogicFn select
-    Y <=  AndAB when "01",
-          OrAB  when "10",
-          XorAB when "11",
-          B when others; -- Not sure if this is the best way     
+    Y <=  B when "00",
+      AndAB when "01",
+      OrAB  when "10",
+      XorAB when "11",
+      (others => 'X') when others;    
 end rtl;
 
 Architecture structure of LogicUnit is
@@ -39,8 +40,82 @@ begin
   LogicUnitXorGate  : entity Work.XorGate generic map(N) port map(A, B, XorAB);
 
   with LogicFn select
-    Y <=  AndAB when "01",
+    Y <=  B when "00",
+          AndAB when "01",
           OrAB  when "10",
           XorAB when "11",
-          B when others; -- Not sure if this is the best way     
+          (others => 'X') when others;
 end structure;
+
+-----------------------------------------------------------------------------
+-- AndGate
+-----------------------------------------------------------------------------
+
+library ieee;
+Use ieee.std_logic_1164.all;
+Use ieee.numeric_std.all;
+Use ieee.std_logic_arith.all;
+
+Entity AndGate is
+  Generic ( N: natural := 64);
+  Port(
+    A       : in std_logic_vector(N-1 downto 0);
+    B       : in std_logic_vector(N-1 downto 0);
+    Result  : out std_logic_vector(N-1 downto 0));
+End Entity AndGate;
+
+Architecture rtl of AndGate is
+begin
+  AndGateIterate: for i in 0 to N-1 generate
+    Result(i) <= A(i) and B(i);
+  end generate AndGateIterate;
+end rtl;
+
+-----------------------------------------------------------------------------
+-- OrGate
+-----------------------------------------------------------------------------
+
+library ieee;
+Use ieee.std_logic_1164.all;
+Use ieee.numeric_std.all;
+Use ieee.std_logic_arith.all;
+
+Entity OrGate is
+  Generic ( N: natural := 64);
+  Port(
+    A       : in std_logic_vector(N-1 downto 0);
+    B       : in std_logic_vector(N-1 downto 0);
+    Result  : out std_logic_vector(N-1 downto 0));
+End Entity OrGate;
+
+Architecture rtl of OrGate is
+begin
+  OrGateIterate: for i in 0 to N-1 generate
+    Result(i) <= A(i) or B(i);
+  end generate OrGateIterate;
+end rtl;
+
+-----------------------------------------------------------------------------
+-- XorGate
+-----------------------------------------------------------------------------
+
+library ieee;
+Use ieee.std_logic_1164.all;
+Use ieee.numeric_std.all;
+Use ieee.std_logic_arith.all;
+
+Entity XorGate is
+  Generic ( N: natural := 64);
+  Port(
+    A       : in std_logic_vector(N-1 downto 0);
+    B       : in std_logic_vector(N-1 downto 0);
+    Result  : out std_logic_vector(N-1 downto 0));
+End Entity XorGate;
+
+Architecture rtl of XorGate is
+begin
+  XorGateIterate: for i in 0 to N-1 generate
+    Result(i) <= A(i) xor B(i);
+  end generate XorGateIterate;
+end rtl;
+

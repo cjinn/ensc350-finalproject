@@ -1,7 +1,6 @@
 vendor_name = ModelSim
 source_file = 1, C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/Adder.vhd
 source_file = 1, C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd
-source_file = 1, C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/LogicGates.vhd
 source_file = 1, C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/LogicUnit.vhd
 source_file = 1, c:/intelfpga_lite/18.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
 source_file = 1, c:/intelfpga_lite/18.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
