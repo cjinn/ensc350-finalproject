@@ -1,0 +1,73 @@
+
+--- LogicUnit.fit.summary ---
+
+Fitter Status : Successful - Sun Apr 05 01:17:08 2020
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : ExU
+Top-level Entity Name : LogicUnit
+Family : Cyclone IV E
+Device : EP4CE115F29C7
+Timing Models : Final
+Total logic elements : 64 / 114,480 ( < 1 % )
+    Total combinational functions : 64 / 114,480 ( < 1 % )
+    Dedicated logic registers : 0 / 114,480 ( 0 % )
+Total registers : 0
+Total pins : 194 / 529 ( 37 % )
+Total virtual pins : 0
+Total memory bits : 0 / 3,981,312 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 532 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )
+
+--- LogicUnit.map.summary ---
+
+Analysis & Synthesis Status : Successful - Sun Apr 05 01:16:55 2020
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : ExU
+Top-level Entity Name : LogicUnit
+Family : Cyclone IV E
+Total logic elements : 64
+    Total combinational functions : 64
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 194
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+
+--- ArithUnit.map.summary ---
+
+Analysis & Synthesis Status : Successful - Sun Apr 05 10:40:19 2020
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : FinalProject
+Top-level Entity Name : ArithUnit
+Family : Cyclone IV E
+Total logic elements : 248
+    Total combinational functions : 248
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 200
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+
+--- ArithUnit.fit.summary ---
+
+Fitter Status : Successful - Sun Apr 05 10:40:32 2020
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : FinalProject
+Top-level Entity Name : ArithUnit
+Family : Cyclone IV E
+Device : EP4CE115F29C7
+Timing Models : Final
+Total logic elements : 248 / 114,480 ( < 1 % )
+    Total combinational functions : 248 / 114,480 ( < 1 % )
+    Dedicated logic registers : 0 / 114,480 ( 0 % )
+Total registers : 0
+Total pins : 200 / 529 ( 38 % )
+Total virtual pins : 0
+Total memory bits : 0 / 3,981,312 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 532 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )
+
