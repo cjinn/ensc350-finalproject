@@ -129,8 +129,4 @@ Backup of *.doc*
 *.~vsd*
 
 ## Project-specific files
-*/Simulation/FuncArithUnitTranscript.txt
-*/Simulation/FuncLogicUnitTranscript.txt
-*/Simulation/TimeArithUnitTranscript.txt
-*/Simulation/TimeLogicUnitTranscript.txt
 *_typ.csd
