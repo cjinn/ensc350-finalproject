@@ -5,7 +5,7 @@ Use ieee.numeric_std.all;
 
 Entity ArithUnit is
   Generic ( N : natural := 64 );
-  Port (
+  Port(
     A       : in std_logic_vector(N-1 downto 0);
     B       : in std_logic_vector(N-1 downto 0);
     AddnSub : in std_logic;
@@ -21,59 +21,39 @@ Entity ArithUnit is
 End Entity ArithUnit;
 
 Architecture rtl of ArithUnit is
-  signal S : std_logic_vector(N-1 downto 0);
-  
+  signal Sig_A : std_logic_vector(N-1 downto 0);
+  signal Sig_B : std_logic_vector(N-1 downto 0);
+  signal AdderOutput : std_logic_vector(N-1 downto 0);
+  signal SgnExt : std_logic_vector(N-1 downto 0);
+
+  signal overflow : std_logic;
+  signal coutSignal : std_logic;
 begin
-  -- Multipler for B input
-  with AddnSub select
-    AltB <=   '0' when '0',
-              '0' when others; -- Needs work
+  
+	Sig_A <= A when (NotA = '0') else
+		   Not A when (NotA = '1');   
 
-    -- Multipler for A input
-    with NotA select
-    AltBu <=  '0' when '0',
-              '0' when others; -- Needs work
-
-    -- Adder (Ripple for now)
-    -- Needs work. Commented out for now
-    --ArithAdder:  entity work.Cnet(Ripple) generic map (16) port map ( A, B, '0', S);
-      
-    -- Sign Extension
-    with ExtWord select
-      Y <=  S when '0',
-            S when others; -- Needs work
+	Sig_B <= B when (AddnSub = '0') else
+		   Not B when (AddnSub = '1');
+	   
+    ArithAdder:  entity work.Adder(rtl) generic map (N)
+      port map (Sig_A, Sig_B, AdderOutput, AddnSub, coutSignal, overflow);
     
-    -- Placeholders
-    Cout <= '0';
-    Ovfl <= '0';
-    Zero <= '0';
+  -- Sign Extension
+	signExt: for i in 0 to 31 generate
+		SgnExt(i) <= AdderOutput(i);
+	end generate signExt;
+	
+	signExtLoop: for i in 32 to N-1 generate	
+		SgnExt(i) <= AdderOutput(31);
+	end generate signExtLoop;
+	
+  Y <= AdderOutput when (ExtWord = '0') else
+    SgnExt when (ExtWord = '1');
+	
+	Zero <= '1' when AdderOutput = x"0000000000000000" else '0';
+	Cout <= coutSignal;
+	Ovfl <= overflow;
+	AltBu <= NOT(coutSignal);
+	AltB <= overflow xor AdderOutput(N-1);
 end Architecture rtl;
-
-Architecture structure of ArithUnit is
-  signal S : std_logic_vector(N-1 downto 0);
-  
-begin
-  -- Multipler for B input
-  with AddnSub select
-    AltB <=   '0' when '0',
-              '0' when others; -- Needs work
-
-    -- Multipler for A input
-    with NotA select
-    AltBu <=  '0' when '0',
-              '0' when others; -- Needs work
-
-    -- Adder (Ripple for now)
-    -- Needs work. Commented out for now
-    --ArithAdder:  entity work.Cnet(Ripple) generic map (16) port map ( A, B, '0', S);
-      
-    -- Sign Extension
-    with ExtWord select
-      Y <=  S when '0',
-            S when others; -- Needs work
-    
-    -- Placeholders
-    Cout <= '0';
-    Ovfl <= '0';
-    Zero <= '0';
-end Architecture structure;
