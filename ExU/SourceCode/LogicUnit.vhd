@@ -70,6 +70,10 @@ begin
   end generate XorGateIterate;
 end rtl;
 
+------------------------------------------------------------------------------
+-- LogicUnit
+------------------------------------------------------------------------------
+
 library ieee;
 Use ieee.std_logic_1164.all;
 Use ieee.numeric_std.all;
