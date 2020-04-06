@@ -1,0 +1,84 @@
+# transcript on
+#----------------------------------------------------------------------------------------------------------
+# compile
+#----------------------------------------------------------------------------------------------------------
+# vcom -work work -2008 -explicit -stats=none ../SourceCode/LogicUnit.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Compiling entity LogicUnit
+# -- Compiling architecture rtl of LogicUnit
+# -- Loading entity AndGate
+# -- Loading entity OrGate
+# -- Loading entity XorGate
+# -- Compiling entity AndGate
+# -- Compiling architecture rtl of AndGate
+# -- Compiling entity OrGate
+# -- Compiling architecture rtl of OrGate
+# -- Compiling entity XorGate
+# -- Compiling architecture rtl of XorGate
+# 
+# vcom -work work -2008 -explicit -stats=none TBLogicUnit.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity TbLogicUnit
+# -- Compiling architecture behavioural of TbLogicUnit
+# 
+# vcom -work work -2008 -explicit -stats=time,-cmd,msg ConfigExU.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:27:28 on Apr 05,2020
+# -- Loading package STANDARD
+# -- Compiling configuration FuncLUSim
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading entity TbLogicUnit
+# -- Loading architecture behavioural of TbLogicUnit
+# -- Loading package std_logic_arith
+# -- Loading entity LogicUnit
+# -- Compiling configuration TimeLUSim
+# -- Loading entity TbLogicUnit
+# -- Loading architecture behavioural of TbLogicUnit
+# -- Loading entity LogicUnit
+# -- Compiling configuration FuncAUSim
+# -- Loading entity TbArithUnit
+# -- Loading architecture behavioural of TbArithUnit
+# -- Loading entity ArithUnit
+# -- Compiling configuration TimeAUSim
+# -- Loading entity TbArithUnit
+# -- Loading architecture behavioural of TbArithUnit
+# -- Loading entity ArithUnit
+# End time: 18:27:28 on Apr 05,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+#----------------------------------------------------------------------------------------------------------
+# Start the simulation
+#----------------------------------------------------------------------------------------------------------
+# vsim -gui work.FuncLUSim -t 100ps
+# vsim -gui work.FuncLUSim -t 100ps 
+# Start time: 18:27:28 on Apr 05,2020
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.funclusim
+# Loading work.tblogicunit(behavioural)
+# Loading work.logicunit(rtl)
+# Loading work.andgate(rtl)
+# Loading work.orgate(rtl)
+# Loading work.xorgate(rtl)
+# transcript off
+#----------------------------------------------------------------------------------------------------------
+# Simulation Run
+#----------------------------------------------------------------------------------------------------------
+# restart -f
+# run 6500 ns
+# ** Note: Simulation Completed
+#    Time: 6181 ns  Iteration: 0  Instance: /tblogicunit
+# transcript off
