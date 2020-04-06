@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ExU
-Sun Apr 05 18:35:58 2020
+Sun Apr 05 21:08:26 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -14,11 +14,14 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: Top-level Entity: |ArithUnit
- 10. Parameter Settings for User Entity Instance: Adder:ArithAdder
- 11. Post-Synthesis Netlist Statistics for Top Partition
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for User Entity Instance: Top-level Entity: |LogicUnit
+ 11. Parameter Settings for User Entity Instance: AndGate:LogicUnitAndGate
+ 12. Parameter Settings for User Entity Instance: OrGate:LogicUnitOrGate
+ 13. Parameter Settings for User Entity Instance: XorGate:LogicUnitXorGate
+ 14. Post-Synthesis Netlist Statistics for Top Partition
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
 
 
 
@@ -44,16 +47,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Apr 05 18:35:58 2020       ;
+; Analysis & Synthesis Status        ; Successful - Sun Apr 05 21:08:26 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; ExU                                         ;
-; Top-level Entity Name              ; ArithUnit                                   ;
+; Top-level Entity Name              ; LogicUnit                                   ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 248                                         ;
-;     Total combinational functions  ; 248                                         ;
+; Total logic elements               ; 64                                          ;
+;     Total combinational functions  ; 64                                          ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
-; Total pins                         ; 200                                         ;
+; Total pins                         ; 194                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -67,7 +70,7 @@ refer to the applicable agreement for further details.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                            ; ArithUnit          ; ExU                ;
+; Top-level entity name                                            ; LogicUnit          ; ExU                ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -168,51 +171,49 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                              ; Library ;
 +----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------+---------+
-; SourceCode/Adder.vhd             ; yes             ; User VHDL File  ; C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/Adder.vhd     ;         ;
-; SourceCode/ArithUnit.vhd         ; yes             ; User VHDL File  ; C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd ;         ;
+; SourceCode/LogicUnit.vhd         ; yes             ; User VHDL File  ; C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/LogicUnit.vhd ;         ;
 +----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------+---------+
 
 
-+----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary              ;
-+---------------------------------------------+------------+
-; Resource                                    ; Usage      ;
-+---------------------------------------------+------------+
-; Estimated Total logic elements              ; 248        ;
-;                                             ;            ;
-; Total combinational functions               ; 248        ;
-; Logic element usage by number of LUT inputs ;            ;
-;     -- 4 input functions                    ; 153        ;
-;     -- 3 input functions                    ; 31         ;
-;     -- <=2 input functions                  ; 64         ;
-;                                             ;            ;
-; Logic elements by mode                      ;            ;
-;     -- normal mode                          ; 248        ;
-;     -- arithmetic mode                      ; 0          ;
-;                                             ;            ;
-; Total registers                             ; 0          ;
-;     -- Dedicated logic registers            ; 0          ;
-;     -- I/O registers                        ; 0          ;
-;                                             ;            ;
-; I/O pins                                    ; 200        ;
-;                                             ;            ;
-; Embedded Multiplier 9-bit elements          ; 0          ;
-;                                             ;            ;
-; Maximum fan-out node                        ; NotA~input ;
-; Maximum fan-out                             ; 130        ;
-; Total fan-out                               ; 1102       ;
-; Average fan-out                             ; 1.70       ;
-+---------------------------------------------+------------+
++----------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                    ;
++---------------------------------------------+------------------+
+; Resource                                    ; Usage            ;
++---------------------------------------------+------------------+
+; Estimated Total logic elements              ; 64               ;
+;                                             ;                  ;
+; Total combinational functions               ; 64               ;
+; Logic element usage by number of LUT inputs ;                  ;
+;     -- 4 input functions                    ; 64               ;
+;     -- 3 input functions                    ; 0                ;
+;     -- <=2 input functions                  ; 0                ;
+;                                             ;                  ;
+; Logic elements by mode                      ;                  ;
+;     -- normal mode                          ; 64               ;
+;     -- arithmetic mode                      ; 0                ;
+;                                             ;                  ;
+; Total registers                             ; 0                ;
+;     -- Dedicated logic registers            ; 0                ;
+;     -- I/O registers                        ; 0                ;
+;                                             ;                  ;
+; I/O pins                                    ; 194              ;
+;                                             ;                  ;
+; Embedded Multiplier 9-bit elements          ; 0                ;
+;                                             ;                  ;
+; Maximum fan-out node                        ; LogicFn[0]~input ;
+; Maximum fan-out                             ; 64               ;
+; Total fan-out                               ; 514              ;
+; Average fan-out                             ; 1.14             ;
++---------------------------------------------+------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                              ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name         ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------+-------------+--------------+
-; |ArithUnit                 ; 248 (119)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 200  ; 0            ; |ArithUnit                  ; ArithUnit   ; work         ;
-;    |Adder:ArithAdder|      ; 129 (129)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ArithUnit|Adder:ArithAdder ; Adder       ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------+-------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
+; |LogicUnit                 ; 64 (64)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 194  ; 0            ; |LogicUnit          ; LogicUnit   ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -231,8 +232,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 4:1                ; 64 bits   ; 128 LEs       ; 128 LEs              ; 0 LEs                  ; No         ; |LogicUnit|Mux63           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
 +---------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |ArithUnit ;
+; Parameter Settings for User Entity Instance: Top-level Entity: |LogicUnit ;
 +----------------+-------+--------------------------------------------------+
 ; Parameter Name ; Value ; Type                                             ;
 +----------------+-------+--------------------------------------------------+
@@ -241,13 +251,33 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Adder:ArithAdder ;
-+----------------+-------+--------------------------------------+
-; Parameter Name ; Value ; Type                                 ;
-+----------------+-------+--------------------------------------+
-; n              ; 64    ; Signed Integer                       ;
-+----------------+-------+--------------------------------------+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AndGate:LogicUnitAndGate ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; n              ; 64    ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: OrGate:LogicUnitOrGate ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; n              ; 64    ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: XorGate:LogicUnitXorGate ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; n              ; 64    ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -256,16 +286,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 200                         ;
-; cycloneiii_lcell_comb ; 249                         ;
-;     normal            ; 249                         ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 64                          ;
-;         3 data inputs ; 31                          ;
-;         4 data inputs ; 153                         ;
+; boundary_port         ; 194                         ;
+; cycloneiii_lcell_comb ; 64                          ;
+;     normal            ; 64                          ;
+;         4 data inputs ; 64                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 66.00                       ;
-; Average LUT depth     ; 41.87                       ;
+; Max LUT depth         ; 1.00                        ;
+; Average LUT depth     ; 1.00                        ;
 +-----------------------+-----------------------------+
 
 
@@ -284,7 +311,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun Apr 05 18:35:46 2020
+    Info: Processing started: Sun Apr 05 21:08:15 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ExU -c ExU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -295,219 +322,29 @@ Info (12021): Found 2 design units, including 1 entities, in source file sourcec
     Info (12022): Found design unit 1: ArithUnit-rtl File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 23
     Info (12023): Found entity 1: ArithUnit File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 6
 Info (12021): Found 8 design units, including 4 entities, in source file sourcecode/logicunit.vhd
-    Info (12022): Found design unit 1: LogicUnit-rtl File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/LogicUnit.vhd Line: 16
-    Info (12022): Found design unit 2: AndGate-rtl File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/LogicUnit.vhd Line: 50
-    Info (12022): Found design unit 3: OrGate-rtl File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/LogicUnit.vhd Line: 74
-    Info (12022): Found design unit 4: XorGate-rtl File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/LogicUnit.vhd Line: 98
-    Info (12023): Found entity 1: LogicUnit File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/LogicUnit.vhd Line: 6
-    Info (12023): Found entity 2: AndGate File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/LogicUnit.vhd Line: 42
-    Info (12023): Found entity 3: OrGate File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/LogicUnit.vhd Line: 66
-    Info (12023): Found entity 4: XorGate File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/LogicUnit.vhd Line: 90
-Info (12127): Elaborating entity "ArithUnit" for the top level hierarchy
-Info (10041): Inferred latch for "Y[0]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[1]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[2]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[3]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[4]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[5]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[6]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[7]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[8]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[9]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[10]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[11]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[12]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[13]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[14]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[15]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[16]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[17]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[18]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[19]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[20]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[21]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[22]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[23]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[24]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[25]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[26]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[27]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[28]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[29]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[30]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[31]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[32]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[33]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[34]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[35]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[36]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[37]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[38]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[39]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[40]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[41]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[42]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[43]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[44]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[45]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[46]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[47]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[48]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[49]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[50]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[51]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[52]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[53]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[54]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[55]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[56]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[57]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[58]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[59]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[60]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[61]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[62]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Y[63]" at ArithUnit.vhd(51) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 51
-Info (10041): Inferred latch for "Sig_B[0]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[1]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[2]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[3]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[4]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[5]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[6]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[7]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[8]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[9]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[10]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[11]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[12]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[13]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[14]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[15]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[16]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[17]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[18]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[19]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[20]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[21]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[22]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[23]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[24]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[25]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[26]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[27]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[28]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[29]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[30]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[31]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[32]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[33]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[34]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[35]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[36]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[37]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[38]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[39]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[40]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[41]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[42]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[43]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[44]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[45]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[46]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[47]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[48]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[49]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[50]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[51]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[52]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[53]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[54]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[55]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[56]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[57]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[58]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[59]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[60]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[61]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[62]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_B[63]" at ArithUnit.vhd(36) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 36
-Info (10041): Inferred latch for "Sig_A[0]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[1]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[2]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[3]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[4]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[5]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[6]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[7]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[8]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[9]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[10]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[11]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[12]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[13]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[14]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[15]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[16]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[17]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[18]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[19]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[20]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[21]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[22]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[23]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[24]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[25]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[26]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[27]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[28]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[29]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[30]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[31]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[32]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[33]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[34]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[35]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[36]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[37]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[38]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[39]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[40]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[41]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[42]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[43]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[44]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[45]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[46]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[47]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[48]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[49]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[50]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[51]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[52]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[53]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[54]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[55]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[56]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[57]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[58]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[59]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[60]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[61]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[62]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (10041): Inferred latch for "Sig_A[63]" at ArithUnit.vhd(33) File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 33
-Info (12129): Elaborating entity "Adder" using architecture "A:rtl" for hierarchy "Adder:ArithAdder" File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/ArithUnit.vhd Line: 39
+    Info (12022): Found design unit 1: AndGate-rtl File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/LogicUnit.vhd Line: 18
+    Info (12022): Found design unit 2: OrGate-rtl File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/LogicUnit.vhd Line: 42
+    Info (12022): Found design unit 3: XorGate-rtl File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/LogicUnit.vhd Line: 66
+    Info (12022): Found design unit 4: LogicUnit-rtl File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/LogicUnit.vhd Line: 92
+    Info (12023): Found entity 1: AndGate File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/LogicUnit.vhd Line: 10
+    Info (12023): Found entity 2: OrGate File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/LogicUnit.vhd Line: 34
+    Info (12023): Found entity 3: XorGate File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/LogicUnit.vhd Line: 58
+    Info (12023): Found entity 4: LogicUnit File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/LogicUnit.vhd Line: 82
+Info (12127): Elaborating entity "LogicUnit" for the top level hierarchy
+Info (12128): Elaborating entity "AndGate" for hierarchy "AndGate:LogicUnitAndGate" File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/LogicUnit.vhd Line: 97
+Info (12128): Elaborating entity "OrGate" for hierarchy "OrGate:LogicUnitOrGate" File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/LogicUnit.vhd Line: 98
+Info (12128): Elaborating entity "XorGate" for hierarchy "XorGate:LogicUnitXorGate" File: C:/Users/Jin-Desktop/Documents/Projects/ensc350-finalproject/ExU/SourceCode/LogicUnit.vhd Line: 99
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 448 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 131 input pins
-    Info (21059): Implemented 69 output pins
-    Info (21061): Implemented 248 logic cells
+Info (21057): Implemented 258 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 130 input pins
+    Info (21059): Implemented 64 output pins
+    Info (21061): Implemented 64 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4809 megabytes
-    Info: Processing ended: Sun Apr 05 18:35:59 2020
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:24
+    Info: Peak virtual memory: 4810 megabytes
+    Info: Processing ended: Sun Apr 05 21:08:26 2020
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:23
 
 
